@@ -29,9 +29,9 @@ body {
     /*
     background-image: url(./assets/bg-mobile.jpg);
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top center;*/
     background-size: cover;
-    */
+    
 
     /*background: color image repeat position/size */
     background: var(--bg-url) no-repeat top center/cover;
@@ -40,7 +40,7 @@ body {
 
 
 body * {
-    font-family: "inter", sans-serif;
+    font-family: "signika negative", sans-serif;
     color: var(--text-color);
 }
 
@@ -53,11 +53,11 @@ body * {
 
 #profile {
     text-align: center;
-    padding: 24px;
+    padding: 28px;
 }
 
 #profile img {
-    width: 112px;
+    width: 115px;
 }
 
 #profile p {
@@ -70,7 +70,7 @@ body * {
     position: relative;
     width: 64px;
 
-    margin: 4px auto;
+    margin: 7px auto;
 
 }
 
@@ -102,8 +102,8 @@ body * {
     display: block;
     width: 64px;
     height: 24px;
-    background: var(--surface-color);
-    border: 1px solid var(--stroke-color);
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, blue, purple, #f700c5) /*var(--surface-color)*/;
+    border: 4px solid transparent/*var(--stroke-color)*/;
     backdrop-filter: blur(4px);
      -webkit-backdrop-filter: blur(4px);
      border-radius: 9999px;
@@ -122,17 +122,33 @@ ul {
 
 ul li a{
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
 
     padding: 16px 24px;
 
-    background: var(--surface-color);
-    border: 1px solid var(--stroke-color);
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, blue, purple, #f700c5) border-box;
+	border: 2px solid transparent;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.4em;
+	font-weight: bold;
+    color: black;
+	padding: 0.5em 1.5em;
+	cursor: pointer;
+
+
+    /*background: var(--surface-color);*/
+    border-width: 4px;
+    border-style: solid;
+    /*border: 4px solid var(--stroke-color);*/
     border-radius: 8px;
 
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    /*backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);*/
 
     text-decoration: none;
     font-weight: 500;
@@ -182,7 +198,7 @@ footer a {
 }
 
 /* media queries */
-@media (min-width: 700px) {
+@media (min-width: 400px) {
     :root {
         --bg-url: url(./assets/bg-desktop.jpg);
     }
